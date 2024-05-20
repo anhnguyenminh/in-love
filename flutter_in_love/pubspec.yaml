@@ -41,14 +41,14 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   intro_slider: ^4.2.1
   flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
 flutter_launcher_icons:
-  image_path: "assets/images/logo-1.png"
+  image_path: "assets/images/sakura_tree.png"
   android: true
   ios: true
   # The "flutter_lints" package below contains a set of recommended lints to
