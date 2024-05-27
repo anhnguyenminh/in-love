@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_in_love/routes/app_pages.dart';
+import 'package:get/get.dart';
 import 'package:flutter_in_love/utils/app_constants.dart';
 
 class NavDrawer extends StatefulWidget {
@@ -65,7 +66,8 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.book,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.OURMEMORIES);
               },
             ),
             MenuItem(
@@ -73,7 +75,8 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.collections,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.IMAGESCOLLECTION);
               },
             ),
             MenuItem(
@@ -81,7 +84,8 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.emoji_events,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.CHALLENGES);
               },
             ),
             MenuItem(
@@ -89,7 +93,17 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.pets,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.PETCARE);
+              },
+            ),
+            MenuItem(
+              label: "Partner Information",
+              icon: Icons.favorite,
+              iconColor: Colors.white,
+              onTap: () {
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.PARTNERINFO);
               },
             ),
             MenuItem(
@@ -97,7 +111,8 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.info,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.AFTERCREDIT);
               },
             ),
             MenuItem(
@@ -105,7 +120,8 @@ class _NavDrawerState extends State<NavDrawer> {
               icon: Icons.settings,
               iconColor: Colors.white,
               onTap: () {
-                //
+                Get.back(closeOverlays: true);
+                Get.toNamed(Routes.SETTINGAPP);
               },
             ),
           ],
@@ -113,26 +129,26 @@ class _NavDrawerState extends State<NavDrawer> {
       ),
     );
   }
-}
 
-Widget MenuItem(
-    {required String label,
-    required IconData icon,
-    required Color iconColor,
-    required VoidCallback onTap}) {
-  return ListTile(
-    leading: Icon(
-      icon,
-      color: iconColor,
-      size: 20,
-    ),
-    title: Text(
-      label,
-      style: TextStyle(
-        color: Colors.white,
-        fontWeight: FontWeight.w600,
+  Widget MenuItem(
+      {required String label,
+      required IconData icon,
+      required Color iconColor,
+      required VoidCallback onTap}) {
+    return ListTile(
+      leading: Icon(
+        icon,
+        color: iconColor,
+        size: 20,
       ),
-    ),
-    onTap: onTap,
-  );
+      title: Text(
+        label,
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      onTap: onTap,
+    );
+  }
 }
